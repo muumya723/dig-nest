@@ -1,97 +1,97 @@
+@charset "UTF-8";
 /* CSSのリセット */
 html, body, ul, ol, li, h1, h2, h3, h4, h5, h6, p, div {
   margin: 0;
   padding: 0;
 }
+
 html {
   /* ルートのフォントサイズを10pxに設定しておく */
-	font-size: 62.5%;
+  font-size: 62.5%;
 }
+
 body {
-  font-family:游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	/* ルートのフォントサイズを1.6em（16pxと同等のサイズ）に設定 */
-	font-size: 1.6em;
+  font-family: 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  /* ルートのフォントサイズを1.6em（16pxと同等のサイズ）に設定 */
+  font-size: 1.6em;
 }
-//ーーーーーここからCSSを記載ーーーーーー
-// li {
-//   list-style: none;
-// }
+
 a {
   text-decoration: none;
 }
+
 * {
   box-sizing: border-box;
 }
-// カラー用の変数を定義
-$color-orange: #F39800;
-$color-white: #fff;
-$color-blue: #29A6DC;
-$color-black: #444444;
-$color-line-black: #A9A9A9;
-$color-gray: #E6E6E6;
-$color-koi-gray:#727171;
-$color-rpa-blue: #C9E8F5;
-$color-green: #75A84B;
-//ーーーーーーここからタイトル用の設定（タイトルの下に青い線ーーーーーーーー
+
 .common-title {
   position: relative;
   display: inline-block;
   margin: 120px 0px;
 }
+
 .common-title:before {
   content: '';
   position: absolute;
   left: 50%;
-  bottom: -40px;/*線の上下位置*/
+  bottom: -40px;
+  /*線の上下位置*/
   display: inline-block;
-  width: 55px;/*線の長さ*/
-  height: 5px;/*線の太さ*/
+  width: 55px;
+  /*線の長さ*/
+  height: 5px;
+  /*線の太さ*/
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);/*位置調整*/
-  background-color: $color-blue;/*線の色*/
-  border-radius: 2px;/*線の丸み*/
+  transform: translateX(-50%);
+  /*位置調整*/
+  background-color: #29A6DC;
+  /*線の色*/
+  border-radius: 2px;
+  /*線の丸み*/
 }
 
-//ーーーーーー「く」を表示するための設定ーーーーーーーー
-.arrow{
-    position: relative;
-    display: inline-block;
-    padding: 0 0 0 16px;
-    color: #000;
-    vertical-align: middle;
-    text-decoration: none;
-    font-size: 15px;
+.arrow {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 16px;
+  color: #000;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 15px;
 }
+
 .arrow::before,
-.arrow::after{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    content: "";
-    vertical-align: middle;
+.arrow::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  content: "";
+  vertical-align: middle;
 }
-.yajirusi::after{
-    left: 270px;
-    width: 4px;
-    height: 4px;
-    border-top: 2px solid $color-white;
-    border-right: 2px solid $color-white;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+
+.yajirusi::after {
+  left: 270px;
+  width: 4px;
+  height: 4px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-.yajirusi2::before{
-    left: 0px;
-    width: 4px;
-    height: 4px;
-    border-top: 2px solid black;
-    border-right: 2px solid black;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+
+.yajirusi2::before {
+  left: 0px;
+  width: 4px;
+  height: 4px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-//ーーーーーーーー ◯と画像の設定ーーーーーーーーーー
-.img-round, .img-title{
+
+.img-round, .img-title {
   display: block;
   position: absolute;
   top: -90px;
@@ -99,97 +99,109 @@ $color-green: #75A84B;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
 .img-round {
   width: 127px;
   height: 127px;
   background-color: #ededed;
   border-radius: 50%;
 }
+
 .img-title {
   width: 62px;
   height: 62px;
 }
-//ーーーーーーここからヘッダーーーーーーーー
+
 .clearfix::after {
-   content: "";
-   display: block;
-   clear: both;
+  content: "";
+  display: block;
+  clear: both;
 }
+
 header {
-  position:fixed;
-  top:0px;
+  position: fixed;
+  top: 0px;
   z-index: 1000;
   background-color: #fff;
   width: 100%;
   height: 80px;
 }
+
 .header-wrapper {
   width: 100%;
   display: flex;
-  position:fixed;
+  position: fixed;
 }
+
 .header-contents {
   width: 65%;
   font-size: 1.6rem;
   margin: 0 auto;
-  img {
-    float: left;
-    padding: 21px 28px;
-  }
-  li {
-    float: left;
-    font-weight: bold;
-    padding: 0px 23px;
-    line-height: 80px;
-    list-style: none;
-  }
-  span {
-    font-size: 1rem;
-    padding-left: 5px;
-    line-height: 75px;
-  }
 }
-.free-consul {
-  background-color: $color-orange;
+
+.header-contents img {
+  float: left;
+  padding: 21px 28px;
+}
+
+.header-contents li {
+  float: left;
+  font-weight: bold;
+  padding: 0px 23px;
   line-height: 80px;
-  color: $color-white;
+  list-style: none;
 }
-//ーーーーーーここまでヘッダーーーーーーーー
-//ーーーーーーここからメインーーーーーーーー
+
+.header-contents span {
+  font-size: 1rem;
+  padding-left: 5px;
+  line-height: 75px;
+}
+
+.free-consul {
+  background-color: #F39800;
+  line-height: 80px;
+  color: #fff;
+}
+
 .main-wrapper {
   margin-top: 80px;
   width: 100%;
   text-align: center;
   position: relative;
- img {
-	width: 100%;
-	height: 450px;
-	object-fit: cover;
-  }
-  h1,h2 {
+}
+
+.main-wrapper img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.main-wrapper h1, .main-wrapper h2 {
   position: absolute;
-  color: $color-white;
+  color: #fff;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  }
-  h1 {
+}
+
+.main-wrapper h1 {
   font-size: 4.5rem;
   top: 40%;
-  }
-  h2 {
+}
+
+.main-wrapper h2 {
   font-size: 2.4rem;
   top: 55%;
-  }
 }
-//ーーーーーーここまでメインーーーーーーーー
-//ーーーーーーここからサービスーーーーーーーー
+
 .service-wrapper {
   width: 100%;
   text-align: center;
-  color: $color-black;
+  color: #444444;
 }
+
 .service-containers {
   margin: 0 auto;
   width: 1045px;
@@ -197,162 +209,180 @@ header {
   display: flex;
   flex-wrap: wrap;
 }
+
 .service-container {
   margin: 50px 15px 50px 15px;
-  color: $color-black;
+  color: #444444;
   height: auto;
-  border: solid 1px $color-line-black;
+  border: solid 1px #A9A9A9;
   position: relative;
   padding: 92px 66px 43px;
   width: 47%;
-  p {
-    font-size: 1.48rem;
-    text-align: left;
-    line-height: 25px;
-    margin-bottom: 40px;
-  }
-  h3 {
-    padding-bottom: 22px;
-  }
-  a {
-      width: 300px;
-      height: 63px;
-      display: block;
-      line-height: 63px;
-      background-color: $color-blue;
-      color: $color-white;
-      font-weight: bold;
-      margin: 0 auto;
-  }
 }
-.service-container-inner{
+
+.service-container p {
+  font-size: 1.48rem;
+  text-align: left;
+  line-height: 25px;
+  margin-bottom: 40px;
+}
+
+.service-container h3 {
+  padding-bottom: 22px;
+}
+
+.service-container a {
+  width: 300px;
+  height: 63px;
+  display: block;
+  line-height: 63px;
+  background-color: #29A6DC;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.service-container-inner {
   width: 358px;
   height: 281px;
   position: relative;
 }
-//ーーーーーーここまでサービスーーーーーーーー
-//ーーーーーーここからお知らせーーーーーーーー
+
 .news-wrapper {
   margin: 0 auto;
   text-align: center;
-  color: $color-black;
+  color: #444444;
 }
+
 .news-contents {
   margin: 0 auto;
   width: 1045px;
 }
+
 .news-content {
   width: 1025px;
   margin: 0 auto;
   text-align: center;
   float: left;
   border-bottom: 1px solid;
-  h5,a {
-    float: left;
-    padding:20px 40px 20px 20px;
-    font-size: 1.4rem;
-    font-weight: normal;
-    text-decoration: underline;
-  }
-  h5 {
-    font-size: 1.4rem;
-  }
-  a {
-    color: black;
-  }
 }
-//ーーーーーー青色のボタンを表示するための設定ーーーーーーーー
+
+.news-content h5, .news-content a {
+  float: left;
+  padding: 20px 40px 20px 20px;
+  font-size: 1.4rem;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+.news-content h5 {
+  font-size: 1.4rem;
+}
+
+.news-content a {
+  color: black;
+}
+
 .bluebtn {
-    clear: left;
-    width: 300px;
-    height: 63px;
-    display: block;
-    line-height: 63px;
-    background-color: $color-blue;
-    color: $color-white;
-    font-weight: bold;
-    margin: 20px auto;
+  clear: left;
+  width: 300px;
+  height: 63px;
+  display: block;
+  line-height: 63px;
+  background-color: #29A6DC;
+  color: #fff;
+  font-weight: bold;
+  margin: 20px auto;
 }
-//ーーーーーーニュースの一番下の青線を解除ーーーーーーーー
+
 .dell {
   border-bottom: none;
 }
-//ーーーーーーここまでお知らせーーーーーーーー
-//ーーーーーーここからアクセスーーーーーーーー
+
 .access-wrapper {
   margin: 0 auto;
   text-align: center;
-  color: $color-black;
+  color: #444444;
 }
+
 .access-contents {
   padding-top: 60px;
   width: 1025px;
   display: flex;
   margin: 0 auto;
   height: auto;
-  h4,h5 {
-    text-align: left;
-  }
-  h4 {
-    margin-bottom: 20px;
-  }
-  h5 {
-    font-weight: normal;
-  }
-}
-.access-content {
-  width: 50%;
-  iframe {
-    margin-top: 20px;
-    margin-bottom: 100px;
-  }
 }
 
-//ーーーーーーここまでアクセスーーーーーーー
-//ーーーーーーここからトップへ戻るボタンーーーーーーーー
+.access-contents h4, .access-contents h5 {
+  text-align: left;
+}
+
+.access-contents h4 {
+  margin-bottom: 20px;
+}
+
+.access-contents h5 {
+  font-weight: normal;
+}
+
+.access-content {
+  width: 50%;
+}
+
+.access-content iframe {
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
 .top-btn {
   height: 60px;
   width: 100%;
-  background-color: $color-gray;
+  background-color: #E6E6E6;
   text-align: center;
   line-height: 60px;
 }
-//ーーーーーーここまでトップへ戻るボタンーーーーーーーー
-//ーーーーーーここからフッターーーーーーーーー
+
 .footer-wrapper {
   width: 1025px;
   margin: 0 auto;
   height: auto;
-
 }
+
 .footer-rootmap {
   margin-top: 130px;
   float: left;
   width: 250px;
-  li {
-    margin: 10px 0px;
-  }
 }
+
+.footer-rootmap li {
+  margin: 10px 0px;
+}
+
 .footer-adresses {
   width: 443px;
   float: left;
-  color: $color-black;
+  color: #444444;
   margin-bottom: 64px;
-  img {
-    margin-top: 30px;
-    margin-bottom: 15px;
-  }
-  h4 {
-    margin: 15px 0;
-  }
-  h5 {
-    font-weight: normal;
-    color: black;
-    span {
-          text-decoration: underline;
-    }
-  }
 }
+
+.footer-adresses img {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.footer-adresses h4 {
+  margin: 15px 0;
+}
+
+.footer-adresses h5 {
+  font-weight: normal;
+  color: black;
+}
+
+.footer-adresses h5 span {
+  text-decoration: underline;
+}
+
 .footer-rootmaps {
   width: 500px;
   height: 208px;
@@ -362,7 +392,7 @@ header {
 
 footer {
   clear: left;
-  background-color: $color-koi-gray;
+  background-color: #727171;
   width: 100%;
   height: 68px;
   line-height: 68px;
@@ -370,8 +400,7 @@ footer {
   color: #fff;
   font-weight: bold;
 }
-// ーーーーーーーー●●ここからRAPのページ●●ーーーーーーーーー
-// ーーーーーーーーここからRPAヘッダーーーーーーーーー
+
 .rpa-osusume-wrapper {
   margin-top: 55px;
   text-align: center;
@@ -383,26 +412,25 @@ footer {
   font-weight: bold;
   color: #444444;
 }
-// ーーーーーーーーここまでRAAヘッダーーーーーーーーーー
-// ーーーーーーーーここからRPAおすすめーーーーーーーー
-.rpa-osusume-target{
+
+.rpa-osusume-target {
   width: 100%;
   height: 630px;
   text-align: center;
-  // background-color: pink;
-  p {
-    color: $color-blue;
-    font-size: 2.3rem;
-    font-weight: bold;
-    padding-bottom: 60px;
-  }
+}
+
+.rpa-osusume-target p {
+  color: #29A6DC;
+  font-size: 2.3rem;
+  font-weight: bold;
+  padding-bottom: 60px;
 }
 
 .rpa-imgs {
   width: 100%;
   height: 270px;
-  // background-color: red;
 }
+
 .img-round2 {
   top: 60px;
   display: block;
@@ -413,6 +441,7 @@ footer {
   background-color: #ededed;
   border-radius: 50%;
 }
+
 .img-title2 {
   display: block;
   width: 62px;
@@ -424,6 +453,7 @@ footer {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
 }
+
 .rpa-osusume-target-contents {
   width: 495px;
   margin: 0 auto;
@@ -431,12 +461,10 @@ footer {
   text-align: left;
   font-size: 1.5rem;
 }
-// ーーーーーーーーここまでRPAおすすめーーーーーーーーー
-// ーーーーーーーーここからRPAのwhyーーーーーーーー
+
 .rpa-main-wrapper {
   width: 1025px;
-  height: 5786px; //^の上まで
-  // background-color: pink;//★
+  height: 5786px;
   margin: 0 auto;
 }
 
@@ -444,33 +472,33 @@ footer {
   width: 1025px;
   height: 66px;
   line-height: 66px;
-  background-color: $color-rpa-blue;
-  padding:10px 16px 10px;
-  color: $color-black;
+  background-color: #C9E8F5;
+  padding: 10px 16px 10px;
+  color: #444444;
   font-size: 1.4rem;
 }
 
 .rpa-main-contents {
   padding-top: 50px;
 }
+
 .rpa-main-contents-bottom {
   padding-bottom: 50px;
 }
 
-// ーーーーーーーーここまでRPAのwhyーーーーーーーーー
-// ーーーーーーーーここから 3.業務の自動化(RPA)でできることーーーーーーーー
 .rpa-main-contents-imgs-text {
   width: 1025px;
   display: flex;
   flex-wrap: wrap;
 }
+
 .rpa-main-contents-imgs {
   width: 33.3%;
   height: 318px;
-  // background-color: red;　//★
   position: relative;
   flex: auto;
 }
+
 .rpa-main-contents-imgs-square {
   display: block;
   width: 158px;
@@ -484,7 +512,8 @@ footer {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-.rpa-main-contents-imgs-img{
+
+.rpa-main-contents-imgs-img {
   display: block;
   width: 92px;
   height: 97px;
@@ -495,6 +524,7 @@ footer {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
+
 .rpa-main-contents-text {
   display: block;
   position: absolute;
@@ -504,8 +534,6 @@ footer {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
 }
-// ーーーーーーーーここまで 3.業務の自動化(RPA)でできることーーーーーーーーー
-// ーーーーーーーーここから 4.業務の自動化(RPA)したときの効果ーーーーーーーー
 
 .rpa-before-title {
   width: 1025px;
@@ -513,15 +541,16 @@ footer {
   line-height: 58px;
   text-align: center;
   border-radius: 20px 20px 0px 0px;
-  background-color: $color-orange;
-  color: $color-white;
+  background-color: #F39800;
+  color: #fff;
 }
+
 .rpa-before {
   width: 1025px;
   height: 330px;
-  border-bottom: dashed 5px $color-orange;
-  border-left: dashed 5px $color-orange;
-  border-right: dashed 5px $color-orange;
+  border-bottom: dashed 5px #F39800;
+  border-left: dashed 5px #F39800;
+  border-right: dashed 5px #F39800;
   border-radius: 0px 0px 20px 20px;
   display: flex;
   padding: 0 80px;
@@ -533,14 +562,15 @@ footer {
   text-align: left;
   font-size: 1.5rem;
 }
+
 .rpa-main-contents-effect-text {
-    // background-color: blue;//★
-    height: 83px;
-    line-height: 83px;
-    text-align: center;
-    color: $color-black;
-    font-size: 2rem;
-  }
+  height: 83px;
+  line-height: 83px;
+  text-align: center;
+  color: #444444;
+  font-size: 2rem;
+}
+
 .ul-class {
   width: 160px;
   height: 325px;
@@ -550,47 +580,49 @@ footer {
   text-align: center;
   list-style: none;
   line-height: 40px;
-  color: $color-black;
-  // background-color: yellow;　//★
+  color: #444444;
 }
 
 .rpa-before-img-tantousya {
   width: 367px;
   height: 325px;
   padding-top: 20px;
-  // background-color: red;　//★
-  img {
-    width: 362px;
-    height: 238px;
-  }
-  p {
-    padding-top: 10px;
-    text-align: center;
-    font-size: 1.8rem;
-    color: $color-black;
-  }
 }
+
+.rpa-before-img-tantousya img {
+  width: 362px;
+  height: 238px;
+}
+
+.rpa-before-img-tantousya p {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #444444;
+}
+
 .rpa-before-img-reportePC {
   width: 131px;
   height: 325px;
   padding-top: 20px;
   display: block;
-  // background-color: orange;　//★
 }
+
 .rpa-before-img-report {
   width: 124px;
   height: 138px;
 }
+
 .rpa-before-img-PC {
   width: 120px;
   height: 113px;
 }
+
 .rpa-before-img-ku {
   width: 95px;
   height: 325px;
   font-weight: bold;
   line-height: 325px;
   text-align: center;
-  // background-color: orange;　//★
-  color: $color-green;
+  color: #75A84B;
 }
