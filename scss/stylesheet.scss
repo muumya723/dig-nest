@@ -112,6 +112,29 @@ $color-usui-green: #DCEDC5;
   width: 62px;
   height: 62px;
 }
+//ーーーーーーーー ボタンの設定ーーーーーーーーーー
+.bluebtn {
+  clear: left;
+  width: 300px;
+  height: 63px;
+  display: block;
+  line-height: 63px;
+  background-color: $color-blue;
+  color: $color-white;
+  font-weight: bold;
+  margin: 20px auto;
+}
+.orangebtn {
+  clear: left;
+  width: 378px;
+  height: 71px;
+  display: block;
+  line-height: 71px;
+  background-color: $color-orange;
+  color: $color-white;
+  font-weight: bold;
+  margin: 20px auto;
+}
 //ーーーーーーここからヘッダーーーーーーーー
 .clearfix::after {
    content: "";
@@ -121,7 +144,7 @@ $color-usui-green: #DCEDC5;
 header {
   position:fixed;
   top:0px;
-  z-index: 1000;
+  z-index: 10;
   background-color: #fff;
   width: 100%;
   height: 80px;
@@ -153,10 +176,17 @@ header {
   }
 }
 .free-consul {
-  background-color: $color-orange;
+  float: left;
+  font-weight: bold;
+  padding: 0px 23px;
   line-height: 80px;
+  list-style: none;
+  background-color: $color-orange;
+  height: 80px;
   color: $color-white;
+  display: inline-block;
 }
+
 //ーーーーーーここまでヘッダーーーーーーーー
 //ーーーーーーここからメインーーーーーーーー
 .main-wrapper {
@@ -264,18 +294,7 @@ header {
     color: black;
   }
 }
-//ーーーーーー青色のボタンを表示するための設定ーーーーーーーー
-.bluebtn {
-    clear: left;
-    width: 300px;
-    height: 63px;
-    display: block;
-    line-height: 63px;
-    background-color: $color-blue;
-    color: $color-white;
-    font-weight: bold;
-    margin: 20px auto;
-}
+
 //ーーーーーーニュースの一番下の青線を解除ーーーーーーーー
 .dell {
   border-bottom: none;
@@ -326,7 +345,6 @@ header {
   width: 1025px;
   margin: 0 auto;
   height: auto;
-
 }
 .footer-rootmap {
   margin-top: 130px;
@@ -378,14 +396,28 @@ footer {
 .rpa-osusume-wrapper {
   margin-top: 55px;
   text-align: center;
-  line-height: 180px;
   width: 100%;
-  height: 160px;
   background-color: #EDEDED;
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: bold;
   color: #444444;
 }
+.rpa-title-kobetu {
+  line-height: 200px;
+  height: 180px;
+}
+.bdTtl {
+display: flex;
+align-items: center;
+justify-content: center;  //全幅で線を引く場合は不要。
+}
+.bdTtl:before,
+.bdTtl:after {
+border-top: 2px solid;
+content: "";
+width:6rem; //全幅で線を引く場合は不要。
+}
+
 // ーーーーーーーーここまでRAAヘッダーーーーーーーーーー
 // ーーーーーーーーここからRPAおすすめーーーーーーーー
 .rpa-osusume-target{
@@ -419,7 +451,7 @@ footer {
 .img-title2 {
   display: block;
   width: 62px;
-  height: 62px;
+  height: auto;
   position: absolute;
   top: 36%;
   left: 50%;
@@ -921,6 +953,8 @@ footer {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+// ーーーーーーーーここまで5.当社の業務自動化サポートの特徴ーーーーーーーーー
+// ーーーーーーーーここから結果ーーーーーーーーー
 .rpa-result {
   width: 1025px;
   height: 243px;
@@ -953,21 +987,134 @@ footer {
     height: auto;
   }
 }
-.orangebtn {
-    clear: left;
-    width: 378px;
-    height: 71px;
-    display: block;
-    line-height: 71px;
-    background-color: $color-orange;
-    color: $color-white;
-    font-weight: bold;
-    margin: 20px auto;
-}
+// .orangebtn {
+//   clear: left;
+//   width: 378px;
+//   height: 71px;
+//   display: block;
+//   line-height: 71px;
+//   background-color: $color-orange;
+//   color: $color-white;
+//   font-weight: bold;
+//   margin: 20px auto;
+// }
 .action {
   h1 {
     margin: 60px 0;
     color: $color-red;
     text-align: center;
   }
+}
+// ーーーーーーーーここまでーーーーーーーーー
+// ーーーーーーーー●●ここから補助金●●ーーーーーーーーー
+.subsidy-title {
+  @extend .rpa-osusume-wrapper;
+  height: 240px;
+  padding-top: 80px;
+  h4 {
+    padding-top: 30px;
+  }
+}
+.subsidy {
+  height: 2610px;
+  h4 {
+    color: $color-black;
+    padding: 20px;
+  }
+  // background-color: red;
+}
+.subsidy-difference {
+  @extend .rpa-osusume-target;
+  // background-color: red;
+}
+.subsidy-imgs {
+  @extend .rpa-imgs;
+  margin-top: 60px;
+}
+.subsidy-img-round {
+  @extend .img-round2;
+  top: 70%
+}
+.subsidy-icon {
+  @extend .img-title2;
+  top:48%;
+}
+.subsidy-difference-contents {
+  @extend .rpa-osusume-target-contents;
+  // background-color: pink;
+  width: 1024px;
+  font-weight: normal;
+  list-style: none;
+  font-size: 1.6rem;
+  padding-bottom: 55px;
+  // background-color: yellow;
+}
+
+table {
+  height: 413px;
+  width: 512px;
+  margin: 0 auto;
+  text-align: center;
+  color: $color-black;
+  font-weight: bold;
+  border-collapse:  collapse;     /* セルの線を重ねる */
+  border-color: black;
+  margin-bottom: 50px;
+  th,td {
+    border: solid 1px;              /* 枠線指定 */
+  }
+  th {
+    width: 114px;
+  }
+}
+// .table-bk-blue {
+//   color: $color-blue;
+// }
+.table-bk-gray {
+  background-color: $color-gray;
+}
+.table-bk-blue {
+  color: $color-blue;
+}
+// .test-hyou {
+//   height: 413px;
+//   width: 512px;
+//   margin: 0 auto;
+//   background-color: green;
+// }
+.subsidy-support {
+  @extend .subsidy-difference-contents;
+  width: 1025px;
+  height: 170px;
+  padding:43px;
+  font-weight: bold;
+  margin: 45px auto;
+  background-color: #FBF6ED;
+}
+.subsidy-flow {
+  // background-color: pink;
+  width: 1025px;
+  height: 423px;
+  display: flex;
+  margin: 0 auto;
+}
+.subsidy-flow-contents {
+  margin:0 22px;
+  width: 169px;
+  text-align: center;
+  color: $color-black;
+  h6 {
+    font-weight: normal;
+    font-size: 1.4rem;
+    text-align: left;
+  }
+  h4 {
+    padding: 20px 0;
+  }
+  img {
+    margin: 20px 0;
+  }
+}
+.mg-left20 {
+  margin-left: 0px;
 }
