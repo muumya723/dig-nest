@@ -128,9 +128,10 @@ header {
 }
 
 .header-contents {
-  width: 65%;
+  width: 75%;
   font-size: 1.6rem;
   margin: 0 auto;
+  background-color: pink;
 }
 
 .header-contents img {
