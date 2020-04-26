@@ -112,12 +112,6 @@ a {
   height: 62px;
 }
 
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 header {
   position: fixed;
   top: 0px;
@@ -125,36 +119,32 @@ header {
   background-color: #fff;
   width: 100%;
   height: 80px;
-}
-
-.header-contents {
-  width: 75%;
   font-size: 1.6rem;
-  margin: 0 auto;
-  background-color: pink;
 }
 
-.header-contents img {
-  float: left;
+header ul {
+  margin: 0 auto;
+  display: flex;
+}
+
+header img {
   padding: 21px 28px;
 }
 
-.header-contents li {
-  float: left;
+header li {
   font-weight: bold;
   padding: 0px 23px;
   line-height: 80px;
   list-style: none;
 }
 
-.header-contents span {
+header span {
   font-size: 1rem;
   padding-left: 5px;
   line-height: 75px;
 }
 
 .free-consul {
-  float: left;
   font-weight: bold;
   padding: 0px 23px;
   line-height: 80px;
@@ -163,6 +153,11 @@ header {
   height: 80px;
   color: #fff;
   display: inline-block;
+}
+
+.header-contents {
+  width: 65%;
+  margin: 0 auto;
 }
 
 .main-wrapper {

@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/* CSSのリセット */
+html, body, ul, ol, li, h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* ルートのフォントサイズを10pxに設定しておく */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  /* ルートのフォントサイズを1.6em（16pxと同等のサイズ）に設定 */
+  font-size: 1.6em;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.common-title {
+  position: relative;
+  display: inline-block;
+  margin: 120px 0px;
+}
+
+.common-title:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -40px;
+  /*線の上下位置*/
+  display: inline-block;
+  width: 55px;
+  /*線の長さ*/
+  height: 5px;
+  /*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  /*位置調整*/
+  background-color: #29A6DC;
+  /*線の色*/
+  border-radius: 2px;
+  /*線の丸み*/
+}
+
+.arrow {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 16px;
+  color: #000;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.arrow::before,
+.arrow::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  content: "";
+  vertical-align: middle;
+}
+
+.yajirusi::after {
+  left: 270px;
+  width: 4px;
+  height: 4px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.yajirusi2::before {
+  left: 0px;
+  width: 4px;
+  height: 4px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.img-round, .img-title {
+  display: block;
+  position: absolute;
+  top: -90px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.img-round {
+  width: 127px;
+  height: 127px;
+  background-color: #ededed;
+  border-radius: 50%;
+}
+
+.img-title {
+  width: 62px;
+  height: 62px;
+}
