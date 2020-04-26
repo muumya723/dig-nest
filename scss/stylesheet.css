@@ -128,12 +128,13 @@ header ul {
 }
 
 header img {
-  padding: 21px 28px;
+  padding: 21px 38px;
+  padding-left: 30px;
 }
 
 header li {
   font-weight: bold;
-  padding: 0px 23px;
+  padding: 0px 28px;
   line-height: 80px;
   list-style: none;
 }
@@ -156,8 +157,9 @@ header span {
 }
 
 .header-contents {
-  width: 65%;
-  margin: 0 auto;
+  height: auto;
+  background-color: pink;
+  margin: 0 250px;
 }
 
 .main-wrapper {
