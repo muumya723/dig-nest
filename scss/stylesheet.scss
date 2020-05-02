@@ -19,11 +19,12 @@ header {
     display: flex;
   }
   img {
-    padding: 21px 28px;
+    padding: 21px 38px;
+    padding-left: 30px;
   }
   li {
     font-weight: bold;
-    padding: 0px 23px;
+    padding: 0px 28px;
     line-height: 80px;
     list-style: none;
   }
@@ -45,8 +46,8 @@ header {
   display: inline-block;
 }
 .header-contents {
-  width: 65%;
-  margin: 0 auto;
+  height: auto;
+  margin:0 250px;
 }
 //ーーーーーーここまでヘッダーーーーーーーー
 //ーーーーーーここからメインーーーーーーーー
